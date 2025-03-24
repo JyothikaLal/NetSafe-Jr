@@ -46,7 +46,7 @@ app.post("/alert", async (req, res) => {
         // Send SMS using Twilio
         const response = await client.messages.create({
             body: message,
-            from:+14708375974,
+            from: YOUR_TWILIO_NUMBER,
             to: PARENT_PHONE_NUMBER// Send the message to parent's number from .env
         });
 
