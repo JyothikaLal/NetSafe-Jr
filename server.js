@@ -47,7 +47,7 @@ app.post("/alert", async (req, res) => {
         const response = await client.messages.create({
             body: message,
             from:+14708375974,
-            to: +918714463747 // Send the message to parent's number from .env
+            to: PARENT_PHONE_NUMBER// Send the message to parent's number from .env
         });
 
         console.log("✅ Message sent:", response.sid);
